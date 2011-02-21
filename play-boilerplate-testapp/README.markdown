@@ -185,8 +185,10 @@ Because we need nothing less than the best... on both sides!
 ## Area of improvements
 
 * See how we can support the boilerplate's build script (which is HUGE) in a Play! app context.
-* Determine where and how users could customize their layout (now the layout folder has built-in dom markup with header, div#main and footer, might need to restrict this to play! apps views which then are decorated with boilerplate's layout).
-* Build a set of command line utility to provide the ability to overidde and customize the layout (like it could be done with the crud module and play crud:ov -template)
-* Brings to module's scope the full QUnit hooked up test suite (and how it may integrate itself with play testing)
 * See how to bring boilerplate's server configuration Play! apps context.
+* Determine where and how users could customize their layout.
+* Build a set of command line utility to provide the ability to overidde and customize the layout.
+* Brings to module's scope the full QUnit hooked up test suite.
+* much more
+
 
