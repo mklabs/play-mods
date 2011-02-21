@@ -1,0 +1,97 @@
+#{extends 'CRUD/layout.html' /}
+
+<div id="crudList" class="${type.name}">
+    
+    <div id="crudListSearch">
+      #{crud.search /}
+    </div>
+    
+ 
+    <table class="crud-grid">
+      <caption>UI Grid integration with Play! Crud module</caption>
+      <thead>
+        <tr>
+          <th data-field="timeZoneId">yayTimezone</th>
+          <th data-field="name">Name</th>
+          <th data-field="language">language</th>
+          <th data-field="offset">offset</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    
+    <div id="crudListPagination">
+      #{crud.pagination /}
+    </div>
+     
+</div>
+
+#{set 'css'}
+<link rel="stylesheet" type="text/css" media="screen" href="/grid/css/themes/base/jquery.ui.all.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/grid/js/grid-datamodel/grid.css">
+#{/set}
+#{set 'js'}
+  	<script src="/grid/js/ui/jquery.ui.core.js"></script>
+  	<script src="/grid/js/ui/jquery.ui.widget.js"></script>
+    <script src="/grid/js/jquery.tmpl.js"></script>
+  	<script src="/grid/js/grid-datamodel/dataitem.js"></script>
+  	<script src="/grid/js/grid-datamodel/datasource.js"></script>
+  	<script src="/grid/js/grid-datamodel/datastore.js"></script>
+  	<script src="/grid/js/grid-datamodel/grid.js"></script>  	
+
+    
+    <script>
+      $(document).ready(function() {
+        
+        var search = $('#crudListSearch'),
+        table = $('.grid-table'),
+        pagination = $('#crudListPagination'),
+        
+        // The grid datasource
+        datasource = $.ui.datasource({
+          // The type of source we're exposing
+          type: 'timezones',
+          // request parameters to be sent whenever datasource.get occurs
+          data: {search: 'français'},
+
+          // remote service url
+          source: '/localisedtimezones.json'
+        }),
+          
+        // Now, let's create the grid widget, store its instance for later
+        grid = $('.crud-grid').grid({
+          // Must match a previously defined datasource
+          type: 'timezones',
+          
+          // Mapping to apply
+          columns: ['timeZoneId', 'name', 'language', 'offset']
+        }).grid('widget'),
+          
+          
+          // Overide default search behaviour to use our own
+        form = search.find('form').bind('submit', function() {
+          datasource.get({
+            search: $.trim($(this).find('input[name="search"]').val())
+          });
+          return false;
+        });
+           
+        // Now deals with pagination link interception. 
+        pagination.delegate('a', 'click', function(e){
+          var link = $(e.target),
+          page = link.attr('href').match(/page=(\d+)/)[1];
+            
+          if(page) {
+            datasource.get({page: page});
+          }
+            
+          return false;
+        });
+          
+
+      });
+    </script>
+#{/set}
+

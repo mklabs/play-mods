@@ -1,0 +1,9 @@
+# This file defines all module routes (Higher priority routes first)
+#
+# import these routes in the main app as :
+# *     /                       module:crud-grid
+#
+# ~~~~
+
+# Map the static resources from the /app/public/javascript/libs folder to the /grid path
+GET        /grid/        staticDir:app/public
