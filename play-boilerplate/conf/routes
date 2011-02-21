@@ -5,5 +5,5 @@
 #
 # ~~~~
 
-# Map the static resources from the /app/public/javascript/libs folder to the /grid path
+# Map the static resources from the /support/html5-boilerplate-v0.9.5 folder to the /boilerplate path
 GET        /boilerplate/        staticDir:support/html5-boilerplate-v0.9.5
