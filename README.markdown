@@ -1,5 +1,3 @@
-Where in I fill in all my play! app
------------------------------------
 
 This repo is meant to hold play! apps I am experimenting (and learning) which do not probably deserve a dedicated repo.
 
