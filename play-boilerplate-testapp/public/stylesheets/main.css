@@ -126,6 +126,12 @@
     padding: 0;
 }
 
+#top a {
+	color: #E16734;
+	text-decoration: none;
+	letter-spacing: 0.3em;
+}
+
 #main .page-content {
     width: 660px;
 }
