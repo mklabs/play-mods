@@ -1,9 +1,9 @@
 Integrating Play framework with jQuery UI Grid
 -------------------------------------------------
 
-This Play! app uses an inner crud-grid play! module that takes care of all assets (js/css) related to the jQuery UI Grid widget. This experiment is heavily inspired by [Integrating Play framework with jQuery DataTables](http://www.lunatech-research.com/archives/2011/01/28/playframework-jquery-datatables) and [Ajax DataTables with the Play framework](http://www.lunatech-research.com/archives/2011/02/07/ajax-datatables-playframework) articles from [Lunatech Research](http://www.lunatech-research.com/editorials/tags/play). This app is a slight variation to use the new UI Grid widget.
+This Play! app uses an inner crud-grid play! module that takes care of all assets (js/css) related to the jQuery UI Grid widget. This experiment is heavily inspired by [Integrating Play framework with jQuery DataTables](//www.lunatech-research.com/archives/2011/01/28/playframework-jquery-datatables) and [Ajax DataTables with the Play framework](//www.lunatech-research.com/archives/2011/02/07/ajax-datatables-playframework) articles from [Lunatech Research](//www.lunatech-research.com/editorials/tags/play). This app is a slight variation to use the new UI Grid widget.
 
-More than three weeks ago, The jQuery UI Team [has announced](http://blog.jqueryui.com/2011/02/unleash-the-grid/) that they are building a grid widget. Here are downloaded current widget sources from jQuery UI [grid branch](https://github.com/jquery/jquery-ui/tree/grid). The widget development takes place in three subfolders: grid-datamodel, grid-markup and grid-type - in this example I will look only into the first one. 
+More than three weeks ago, The jQuery UI Team [has announced](http://blog.jqueryui.com/2011/02/unleash-the-grid/) that they are building a grid widget. Here are downloaded current widget sources from jQuery UI [grid branch](//github.com/jquery/jquery-ui/tree/grid). The widget development takes place in three subfolders: grid-datamodel, grid-markup and grid-type - in this example I will look only into the first one. 
 
 ## Example application
 
