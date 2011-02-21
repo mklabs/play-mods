@@ -1,0 +1,182 @@
+/* we do not need to link to ourselves. only our friends. <3 */
+/* Mostly inspired by the Play! homepage */
+.wrapper {
+    width: 960px;
+    margin: auto;
+    position: relative; 
+}
+.wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.wrapped {
+    width: 650px;
+}
+
+
+/** HEADER **/
+
+#header {
+    height: 70px;
+    background: #444;
+    background:  -webkit-gradient(linear, left top, left bottom, from(#555), to(#333));
+    background:  -moz-linear-gradient(left bottom, #555, #333);
+    background:  gradient(linear, left top, left bottom, from(#555), to(#333));
+}
+
+#header h2 { color: #bada55; }
+
+#header h1 {
+	letter-spacing: 0.3em;
+}
+
+#header h1 a {
+    color: #dfdfdf;
+    font-style: italic;
+    font-size: 1.7em;
+    font-weight: lighter;
+    line-height: 1.4em;
+    padding-top: 0.7em;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+
+#header h1 a span.play {
+	color: #bada55;
+	font-size: 1em;
+	font-style: normal;
+	margin-left: -0.4em;
+	
+ -moz-transform: rotate(15deg);  /* FF3.5+ */
+       -o-transform: rotate(15deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(15deg);  /* Saf3.1+, Chrome */
+      -ms-transform: rotate(15deg);  /* IE9 */
+          transform: rotate(15deg);  
+             filter: progid:DXImageTransform.Microsoft.Matrix(/* IE6–IE9 */ 
+                     M11=0.9659258262890683, M12=-0.25881904510252074, M21=0.25881904510252074, M22=0.9659258262890683, sizingMethod='auto expand');
+               zoom: 1;
+	
+}
+
+#header h1 a:hover {
+	text-shadow: 0 0 15px #fff;
+}
+
+#header ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+#header ul li {
+    float: left;
+    padding: 15px 15px;
+    position: relative;
+}
+
+#header ul span {
+    display: none;
+}
+
+#header ul a {
+    color: #B3E862;
+    color: #999;
+    text-shadow: #000 -1px -1px 0px;
+    text-decoration: none;
+    font-size: 15px;
+}
+#header ul a:hover {
+    color: #B3E862;
+    color: #ccc;
+}
+
+#header ul .selected a {
+    color: #fff;
+}
+
+#top {
+    background: #8adc92;
+    padding: 10px 0 0;
+    overflow: hidden
+    zoom: 1;
+    margin-bottom: 20px;
+    background: -webkit-gradient(linear, left bottom, right top, from(#555), to(#333));
+    background: -moz-linear-gradient(left bottom, #fff, #bada55);
+    background: gradient(linear, left bottom, right top, from(#B3E862), to(#73dac1));
+    color: #bada55;
+    text-shadow: rgba(255, 255, 255, 0.3) 1px 1px 0px;
+    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid rgba(0,0,0, 0.1);
+}
+
+#top p {
+    color: #1e4432;
+    color: rgba(30, 68, 50, 0.8);
+    font-weight: lighter;
+    font-size: 1.5em;
+    color: #525252;
+    line-height: 1.4em;
+    letter-spacing: 0.3em;
+    width: 960px;
+    margin: 0 auto 10px;
+    padding: 0;
+}
+
+#main .page-content {
+    width: 660px;
+}
+
+#main .page-sidebar {
+    overflow: hidden;
+}
+
+#main .page-sidebar a {
+	text-decoration: none;
+	color: #777;
+}
+
+/* Inline star bullet, courtesy of boilerplate **/
+#container ul { list-style: none !important;}
+#container li:before{content:"★"; padding-right:0.5em; color: #bada55;}
+
+/* Super awesome b strips, courtesy of boilerplate */
+b {
+    -moz-transform: scale(1.5) rotate(-45deg);
+    -moz-transform-origin: 20% 0;
+    background:  -webkit-linear-gradient(left bottom, #fff, #efefef);
+    background:  -moz-linear-gradient(left bottom, #fff, #efefef);
+    background:  gradient(linear, left top, left bottom, from(#fff), to(#efefef));
+    display: block;
+    height: 100%;
+    left: -1em;
+    position: fixed;
+    top: 50%;
+    width: 1em;
+    z-index: -1;
+}
+
+b.border-b {
+    -moz-transform: scale(1.5) rotate(45deg);
+    -moz-transform-origin: 80% 0;
+    left: auto;
+    right: -1em;
+}
+
+b.border-c {
+    -moz-transform: scale(1.5) rotate(-45deg);
+    -moz-transform-origin: 20% 0;
+    left: 2em;
+    top: 0;
+}
+
+b.border-d {
+    -moz-transform: scale(1.5) rotate(45deg);
+    -moz-transform-origin: 80% 0;
+    left: auto;
+    right: 2em;
+    top: 0;
+}
