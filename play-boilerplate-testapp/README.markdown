@@ -130,6 +130,8 @@ It basically tries to adapt official boilerplate's markup to the play's layout s
 	</html>
 	
 As you can see, the whole set of static boilerplate's file are made available with the /boilerplate/ path and are properly referenced in the layout's markup. Indeed, the Play! Boilerplate module expose the following routes:
+
+    GET        /boilerplate/        staticDir:support/html5-boilerplate-v0.9.5
 	
 It maps the static resources from the support/html5-boilerplate-v0.9.5 to the /boilerplate/ path 
 
@@ -186,4 +188,5 @@ Because we need nothing less than the best... on both sides!
 * Determine where and how users could customize their layout (now the layout folder has built-in dom markup with header, div#main and footer, might need to restrict this to play! apps views which then are decorated with boilerplate's layout).
 * Build a set of command line utility to provide the ability to overidde and customize the layout (like it could be done with the crud module and play crud:ov -template)
 * Brings to module's scope the full QUnit hooked up test suite (and how it may integrate itself with play testing)
+* See how to bring boilerplate's server configuration Play! apps context.
 
