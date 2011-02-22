@@ -91,9 +91,12 @@
     overflow: hidden
     zoom: 1;
     margin-bottom: 20px;
-    background: -webkit-gradient(linear, left bottom, right top, from(#fff), to(#bada55));
-    background: -moz-linear-gradient(left bottom, #fff, #bada55);
-    background: gradient(linear, left bottom, right top, from(#fff), to(#bada55));
+    background-color: #ffffff;
+    background-image: -moz-linear-gradient(left top, #ffffff, #bada55); /* FF3.6 */
+    background-image: -webkit-gradient(linear,left bottom,right top,color-stop(0, #ffffff),color-stop(1, #bada55)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(#ffffff, #bada55); /* Chrome 10+, Saf6 */
+    background-image: linear-gradient(left top, #ffffff, #bada55);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#bada55'); /* IE6–IE9 */
     
     
     color: #bada55;
@@ -138,17 +141,39 @@
 	text-shadow: 0 0 15px #fff;
 }
 
+footer {
+  background-color: #efefef;
+  background-image: -moz-linear-gradient(top, #efefef, #ffffff); /* FF3.6 */
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #efefef),color-stop(1, #ffffff)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(#efefef, #ffffff); /* Chrome 10+, Saf6 */
+  background-image: linear-gradient(top, #efefef, #ffffff);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#efefef', EndColorStr='#ffffff'); /* IE6–IE9 */
+  border-top: 1px solid #ccc;
+  color: #999;
+  margin: 30px 0 0 0;
+  display: block;
+  padding: 2em;
+}
+
+footer a,footer a:visited,footer a:active{color: #aaa;;text-decoration:none;}
+footer a:hover,footer a:focus{color: #E16734;}
+footer p span{margin:0.5em;}
+
 /* Inline star bullet, courtesy of boilerplate **/
 #container ul { list-style: none !important;}
 #container li:before{content:"★"; padding-right:0.5em; color: #bada55;}
 
 /* Super awesome b strips, courtesy of boilerplate */
 b {
+    -webkit-transform: scale(1.5) rotate(45deg);
+    -webkit-transform-origin: 20% 0%;
     -moz-transform: scale(1.5) rotate(-45deg);
     -moz-transform-origin: 20% 0;
-    background:  -webkit-gradient(left bottom, #fff, #efefef);
-    background:  -moz-linear-gradient(left bottom, #fff, #efefef);
-    background:  gradient(linear, left top, left bottom, from(#fff), to(#efefef));
+    -o-transform: scale(1.5) rotate(45deg);
+    -o-transform-origin: 20% 0%;
+    background:  -webkit-gradient(left bottom, #ffffff, #efefef);
+    background:  -moz-linear-gradient(left bottom, #ffffff, #efefef);
+    background:  gradient(linear, left top, left bottom, from(#ffffff), to(#efefef));
     display: block;
     height: 100%;
     left: -1em;
@@ -189,6 +214,10 @@ b.border-d {
   top: 0;
 }
 
+b { display: block; position: fixed; top: 50%; left: -1em; width: 1em; height: 100%; z-index: -1; -webkit-transform: scale(1.5) rotate(-45deg); -webkit-transform-origin: 20% 0%; -moz-transform: scale(1.5) rotate(-45deg); -moz-transform-origin: 20% 0%; -o-transform: scale(1.5) rotate(-45deg); -o-transform-origin: 20% 0%; background: -webkit-gradient(linear, left bottom, right top, from(#fff), to(#efefef)); background: -moz-linear-gradient(left bottom, #fff, #efefef); background: gradient(linear, left bottom, right top, from(#fff), to(#efefef));}
+b.border-b { -webkit-transform: scale(1.5) rotate(45deg); -webkit-transform-origin: 80% 0%; -moz-transform: scale(1.5) rotate(45deg); -moz-transform-origin: 80% 0%; -o-transform: scale(1.5) rotate(45deg); -o-transform-origin: 80% 0%; left: auto; right: -1em; }
+b.border-c { -webkit-transform: scale(1.5) rotate(-45deg); -webkit-transform-origin: 20% 0%; -moz-transform: scale(1.5) rotate(-45deg); -moz-transform-origin: 20% 0%; -o-transform: scale(1.5) rotate(-45deg); -o-transform-origin: 20% 0%; left: 2em; top: 0; }
+b.border-d { -webkit-transform: scale(1.5) rotate(45deg); -webkit-transform-origin: 80% 0%; -moz-transform: scale(1.5) rotate(45deg); -moz-transform-origin: 80% 0%;  -o-transform: scale(1.5) rotate(45deg); -o-transform-origin: 80% 0%; left: auto; right: 2em; top: 0; }
 
 
 .wikistyle h1:before,.wikistyle h2:before,.wikistyle h3:before,.wikistyle h4:before,.wikistyle h5:before,.wikistyle h6:before,
