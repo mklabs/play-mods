@@ -102,9 +102,11 @@
     overflow: hidden
     zoom: 1;
     margin-bottom: 20px;
-    background: -webkit-gradient(linear, left bottom, right top, from(#555), to(#333));
+    background: -webkit-gradient(linear, left bottom, right top, from(#fff), to(#bada55));
     background: -moz-linear-gradient(left bottom, #fff, #bada55);
-    background: gradient(linear, left bottom, right top, from(#B3E862), to(#73dac1));
+    background: gradient(linear, left bottom, right top, from(#fff), to(#bada55));
+    
+    
     color: #bada55;
     text-shadow: rgba(255, 255, 255, 0.3) 1px 1px 0px;
     border-bottom: 1px solid #bbb;
@@ -155,7 +157,7 @@
 b {
     -moz-transform: scale(1.5) rotate(-45deg);
     -moz-transform-origin: 20% 0;
-    background:  -webkit-linear-gradient(left bottom, #fff, #efefef);
+    background:  -webkit-gradient(left bottom, #fff, #efefef);
     background:  -moz-linear-gradient(left bottom, #fff, #efefef);
     background:  gradient(linear, left top, left bottom, from(#fff), to(#efefef));
     display: block;
